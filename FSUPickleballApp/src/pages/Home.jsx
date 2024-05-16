@@ -83,7 +83,7 @@ const Home = () => {
   <>
 
     <BgImageContainer>
-      <HeaderImage src='\src\images\peopleplaying.jpg'></HeaderImage>
+      <HeaderImage src='./images/peopleplaying.jpg'></HeaderImage>
 
       <HStack>
         <MainText>Florida State University Pickleball</MainText>
@@ -92,6 +92,7 @@ const Home = () => {
     </BgImageContainer>
     <Section id="one">
       <Container className="home-container">
+        <HeaderText>section 1 (who we are)</HeaderText> 
       </Container>
     </Section>
 
@@ -102,28 +103,28 @@ const Home = () => {
         <CardContainer>
           <RowStack>
             <Card>
-              <ProfileImage src ="\src\images\finaCropped2.jpg"/>
+              <ProfileImage src ="./images/finaCropped2.jpg"/>
               <Position>President</Position>
               <AboutProfile>
                 placeholder text
               </AboutProfile>
             </Card>
             <Card>
-              <ProfileImage src ="\src\images\bella.jpg"/>
+              <ProfileImage src ="./images/bella.jpg"/>
               <Position>Vice President</Position>
               <AboutProfile>
                 placeholder text
               </AboutProfile>
             </Card>
             <Card>
-              <ProfileImage src ="\src\images\zakCropped.png"/>
+              <ProfileImage src ="./images/zakCropped.png"/>
               <Position>Treasurer</Position>
               <AboutProfile>
                 placeholder text
               </AboutProfile>
             </Card>
             <Card>
-              <ProfileImage src ="\src\images\josh.JPEG"/>
+              <ProfileImage src ="./images/josh.JPEG"/>
               <Position>Social Media</Position>
               <NameTxt>Josh Phillips</NameTxt>
               <AboutProfile>
@@ -134,42 +135,42 @@ const Home = () => {
               </AboutProfile>
             </Card>
             <Card>
-              <ProfileImage src ="\src\images\isaiah.jpg"/>
+              <ProfileImage src ="./images/isaiah.jpg"/>
               <Position>Risk Management</Position>
               <AboutProfile>
                 placeholder text
               </AboutProfile>
             </Card>
             <Card>
-              <ProfileImage src ="\src\images\blank-profile-picture-973460_1280.png"/>
+              <ProfileImage src ="./images/blank-profile-picture-973460_1280.png"/>
               <Position>Sports Chair</Position>
               <AboutProfile>
                 placeholder text
               </AboutProfile>
             </Card>
             <Card>
-              <ProfileImage src ="\src\images\blank-profile-picture-973460_1280.png"/>
+              <ProfileImage src ="./images/blank-profile-picture-973460_1280.png"/>
               <Position>Merch Chair</Position>
               <AboutProfile>
                 placeholder text
               </AboutProfile>
             </Card>
             <Card>
-              <ProfileImage src ="\src\images\blank-profile-picture-973460_1280.png"/>
+              <ProfileImage src ="./images/blank-profile-picture-973460_1280.png"/>
               <Position>Community Outreach</Position>
               <AboutProfile>
                 placeholder text
               </AboutProfile>
             </Card>
             <Card>
-              <ProfileImage src ="\src\images\blank-profile-picture-973460_1280.png"/>
+              <ProfileImage src ="./images/blank-profile-picture-973460_1280.png"/>
               <Position>Fundraising</Position>
               <AboutProfile>
                 placeholder text
               </AboutProfile>
             </Card>
             <Card>
-              <ProfileImage src ="\src\images\blank-profile-picture-973460_1280.png"/>
+              <ProfileImage src ="./images/blank-profile-picture-973460_1280.png"/>
               <Position>Writer</Position>
               <AboutProfile>
                 placeholder text
@@ -183,7 +184,7 @@ const Home = () => {
 
     <Section id="three">
       <Container className="home-container">
-        <HeaderText>HOME</HeaderText>
+        <HeaderText>section 3</HeaderText>
       </Container>
     </Section>
     </>

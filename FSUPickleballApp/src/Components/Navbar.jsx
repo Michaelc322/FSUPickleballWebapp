@@ -211,7 +211,7 @@ function Navbar(){
     <>
         <Nav>
             <LogoNav href ="/">
-                <LogoImage src=".\src\assets\fsupblogo.png"/>
+                <LogoImage src="./assets/fsupblogo.png"/>
                 {/* <LogoTitle>FSU Pickleball</LogoTitle> */}
             </LogoNav>
 

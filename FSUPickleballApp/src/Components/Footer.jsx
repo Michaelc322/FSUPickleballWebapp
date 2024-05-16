@@ -86,8 +86,8 @@ function Footer(){
             </FooterContainer>
             <BreakLine/>
             <SponsorBox>
-                <Sponsor src="\src\images\blooballzlogo.png"/>
-                <Sponsor src="\src\images\prettypbcologo.png"/>
+                <Sponsor src="./images/blooballzlogo.png"/>
+                <Sponsor src="./images/prettypbcologo.png"/>
             </SponsorBox>
 
         </Box>
