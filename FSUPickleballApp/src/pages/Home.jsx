@@ -3,6 +3,7 @@ import '../styles/home.css'
 import styled from 'styled-components'
 import {Card, CardContainer, ProfileImage, RowStack, AboutProfile, Position, NameTxt} from '../Components/CardComponents'
 import {BreakLine} from '../Components/Footer'
+import { device } from '../styles/breakpoints'
 
 const HeaderText = styled.h1`
   color: #2C2A29;
@@ -35,6 +36,12 @@ const HStack = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     width: 900px;
+
+    @media ${device.md} {
+      width: 100%;
+      text-align: center;
+
+    }
 `
 const HeaderImage = styled.img`
   width: 100%;
@@ -60,6 +67,11 @@ const MainText = styled.h3`
     padding-right: 50px;
     text-shadow: 0px 2px 2.5px rgba(0, 0, 0, 0.8);
     margin: 0;
+
+    @media ${device.md} {
+      padding-right: 0px;
+      
+    }
 `
 
 const SubText = styled.h4`

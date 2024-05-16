@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../styles/breakpoints";
 
 export const CardContainer = styled.div`
     display: flex;
@@ -27,6 +28,10 @@ export const Card = styled.div`
         transform: scale(1.02);
         transition: all 0.2s ease-in-out;
     
+    }
+
+    @media ${device.sm} {
+        height: auto;
     }
 
 `
