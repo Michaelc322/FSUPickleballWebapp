@@ -8,10 +8,11 @@ const HStack = styled.div`
     justify-content: space-evenly;
     
 `
-const BreakLine = styled.div`
+export const BreakLine = styled.div`
     width: 400px;
     border-bottom: 1px solid #cfcfcf;
 `
+
 const FootHeader = styled.h1`
     font-size: 1.7rem;
     font-family: 'Poppins', sans-serif;

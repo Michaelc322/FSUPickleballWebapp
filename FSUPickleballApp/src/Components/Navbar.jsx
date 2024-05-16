@@ -135,7 +135,7 @@ const MobileMenuDiv = styled.div`
     @media screen and (max-width: 768px){
         position: fixed;
         z-index: 13;
-        background-color: #121212;
+        background-color: #f0f0f0;
         box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
         height: auto;
         width: 100%;
@@ -165,16 +165,7 @@ const MenuLink = styled.a`
     cursor: pointer;
     font-size: 18px;
     font-weight: 700;
-    color: white;
-
-
-
-    i{
-        margin-right: 10px;
-        margin-left: 5px;
-
-    
-    }
+    color: #2C2A29;
 
 `
 
@@ -195,6 +186,7 @@ const DonateBtn = styled.a`
   padding: 6px 16px;
   border-radius: 10px;
   border: solid 1px transparent;
+  transition: all 0.3s ease;
 
   &:hover{
     background-color: transparent;
@@ -241,9 +233,10 @@ function Navbar(){
 
 
         <MobileMenuDiv className={openHamburgerMenu ? "menuActive" : ""}>
-            <MenuLink href="/">Home<i className="fa-solid fa-house"></i></MenuLink>
-            <MenuLink href="/getstarted">Documentation<i className="fa-solid fa-folder-open"></i></MenuLink>
-            <MenuLink href="/reserve-courts">Reserve<i className="fa-solid fa-calendar-days"></i></MenuLink>
+            <MenuLink href="/">Read About Us!</MenuLink>
+            <MenuLink href="/">About</MenuLink>
+            <MenuLink href="/contact">Contact Us</MenuLink>
+            <MenuLink href="/donate">Support Us</MenuLink>
 
         </MobileMenuDiv>   
         

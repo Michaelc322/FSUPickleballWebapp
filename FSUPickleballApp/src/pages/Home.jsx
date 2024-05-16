@@ -1,8 +1,8 @@
 import React from 'react'
 import '../styles/home.css'
 import styled from 'styled-components'
-import {Card, CardContainer, ProfileImage, RowStack, AboutProfile, Position} from '../Components/CardComponents'
-
+import {Card, CardContainer, ProfileImage, RowStack, AboutProfile, Position, NameTxt} from '../Components/CardComponents'
+import {BreakLine} from '../Components/Footer'
 
 const HeaderText = styled.h1`
   color: #2C2A29;
@@ -77,6 +77,7 @@ const SubText = styled.h4`
     }
 `
 
+
 const Home = () => {
   return (
   <>
@@ -91,46 +92,85 @@ const Home = () => {
     </BgImageContainer>
     <Section id="one">
       <Container className="home-container">
-        <HeaderText>Who we are</HeaderText>
       </Container>
     </Section>
 
     <Section id="two">
       <Container className="home-container">
-        <HeaderText>Meet the Executive Board!</HeaderText>
+        <HeaderText>Serve, Rally, Connect: Meet the Pickleball Board!</HeaderText>
+        <BreakLine/>
         <CardContainer>
           <RowStack>
             <Card>
-              <ProfileImage src ="\src\images\blank-profile-picture-973460_1280.png"/>
+              <ProfileImage src ="\src\images\finaCropped2.jpg"/>
               <Position>President</Position>
               <AboutProfile>
                 placeholder text
               </AboutProfile>
             </Card>
             <Card>
-              <ProfileImage src ="\src\images\blank-profile-picture-973460_1280.png"/>
+              <ProfileImage src ="\src\images\bella.jpg"/>
               <Position>Vice President</Position>
               <AboutProfile>
                 placeholder text
               </AboutProfile>
             </Card>
             <Card>
-              <ProfileImage src ="\src\images\blank-profile-picture-973460_1280.png"/>
+              <ProfileImage src ="\src\images\zakCropped.png"/>
               <Position>Treasurer</Position>
               <AboutProfile>
                 placeholder text
               </AboutProfile>
             </Card>
             <Card>
-              <ProfileImage src ="\src\images\blank-profile-picture-973460_1280.png"/>
+              <ProfileImage src ="\src\images\josh.JPEG"/>
               <Position>Social Media</Position>
+              <NameTxt>Josh Phillips</NameTxt>
+              <AboutProfile>
+                Hi! My name is Josh Phillips and I am the social media captain for the FSU Pickleball Club.
+                I am a senior and will be graduating in 2025 with a degree in Marketing. I started playing pickleball
+                in January of 2023 and I use an Engage Pursuit Pro 1 paddle. I am also an ambassador for Engage Pickleball,
+                so if you need a new paddle, hit me up :)
+              </AboutProfile>
+            </Card>
+            <Card>
+              <ProfileImage src ="\src\images\isaiah.jpg"/>
+              <Position>Risk Management</Position>
               <AboutProfile>
                 placeholder text
               </AboutProfile>
             </Card>
             <Card>
               <ProfileImage src ="\src\images\blank-profile-picture-973460_1280.png"/>
-              <Position>Risk Management</Position>
+              <Position>Sports Chair</Position>
+              <AboutProfile>
+                placeholder text
+              </AboutProfile>
+            </Card>
+            <Card>
+              <ProfileImage src ="\src\images\blank-profile-picture-973460_1280.png"/>
+              <Position>Merch Chair</Position>
+              <AboutProfile>
+                placeholder text
+              </AboutProfile>
+            </Card>
+            <Card>
+              <ProfileImage src ="\src\images\blank-profile-picture-973460_1280.png"/>
+              <Position>Community Outreach</Position>
+              <AboutProfile>
+                placeholder text
+              </AboutProfile>
+            </Card>
+            <Card>
+              <ProfileImage src ="\src\images\blank-profile-picture-973460_1280.png"/>
+              <Position>Fundraising</Position>
+              <AboutProfile>
+                placeholder text
+              </AboutProfile>
+            </Card>
+            <Card>
+              <ProfileImage src ="\src\images\blank-profile-picture-973460_1280.png"/>
+              <Position>Writer</Position>
               <AboutProfile>
                 placeholder text
               </AboutProfile>
