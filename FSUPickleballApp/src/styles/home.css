@@ -1,0 +1,13 @@
+section {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background-color: #121212;
+    height: 100vh;
+    top: 80px;
+    flex-direction: column;
+}
+
+#two {
+    background-color: #f0f0f0;
+}
