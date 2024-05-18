@@ -70,7 +70,7 @@ export const Position = styled.h3`
 export const AboutProfile = styled.p`
     font-size: 1rem;
     font-family: Josefin Sans;
-    font-weight: 370;
+    font-weight: 500;
     color: #782F40;
     line-height: 1.3;
     padding-right: 32px;

@@ -4,10 +4,22 @@ import styled from 'styled-components'
 import {Card, CardContainer, ProfileImage, RowStack, AboutProfile, Position, NameTxt} from '../Components/CardComponents'
 import {BreakLine} from '../Components/Footer'
 import { device } from '../styles/breakpoints'
+import { EmbedContainer, EmbedBackground, Clickable, CalendarHolder, SectionThreeRow, Event, EventContainer } from '../Components/NewsComponents'
+import { useEffect, useState } from 'react'
+import { gapi } from 'gapi-script'
+
 
 const HeaderText = styled.h1`
   color: #2C2A29;
   font-family: Poppins;
+  text-decoration: none;
+`
+const EventHeaderText = styled.h1`
+  margin: 0;
+  padding: 27px;
+  color: #2C2A29;
+  font-family: Poppins;
+  text-decoration: none;
 `
 
 const Section = styled.section`
@@ -88,9 +100,74 @@ const SubText = styled.h4`
     
     }
 `
+function formatDateTime(dateTimeString) {
+  const options = {
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+      hour12: true
+  };
 
+  const date = new Date(dateTimeString);
+
+  // Create a formatter for the date
+  const formattedDate = new Intl.DateTimeFormat('en-US', options).format(date);
+
+  return formattedDate;
+}
+
+const Divider = styled.div`
+
+  width: 100%;
+  height: 1px;
+  background-color: #b3b3b3;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+`
 
 const Home = () => {
+  // const calendarID = process.env.REACT_APP_CALENDAR_ID
+  // const apiKey = process.env.REACT_APP_GOOGLE_API_KEY
+  // const accessToken = process.env.REACT_APP_GOOGLE_ACCESS_TOKEN
+  const calendarID = "a8cc1e69cfa3851424fac02c2d1f9c40c22008d8f4c7d29e4d0875385d95f069@group.calendar.google.com"
+  const apiKey = "AIzaSyBBGKBD80QjZ2KalZanUDhRnaG4BU46UDY"
+  const [events, setEvents] = useState([])
+
+  const getEvents = (calendarID, apiKey) => {
+    function initiate() {
+        gapi.client
+            .init({
+                apiKey: apiKey,
+            })
+            .then(function () {
+                return gapi.client.request({
+                    path: `https://www.googleapis.com/calendar/v3/calendars/${calendarID}/events`,
+                })
+            })
+            .then(
+                (response) => {
+                    let events = response.result.items
+                    setEvents(events)
+                    console.log(response.result.items);
+                },
+                function (err) {
+                    return [false, err]
+                }
+            )
+    }
+    gapi.load('client', initiate)
+}
+
+useEffect(() => {
+    const events = getEvents(calendarID, apiKey)
+    setEvents(events)
+}, [])
+  
+
+
+
   return (
   <>
 
@@ -196,8 +273,35 @@ const Home = () => {
 
     <Section id="three">
       <Container className="home-container">
-        <HeaderText>section 3</HeaderText>
+        <HeaderText>Keep up with the latest!</HeaderText>
       </Container>
+      <SectionThreeRow>
+      <Clickable href="https://thetundra.com/conventionsnews/florida-state?fbclid=PAZXh0bgNhZW0CMTEAAaaH_wUuI0WpFbDOtYdURA1rUIA5TRURuJaZ5ZwcPTQimc9m60WoZUY_GRo_aem_AaJqWDpAstYVS08ftPk2VFsRob6cGeA7xd-7jBzhwOp-O2ZRiPzLG9kZemwdc6-YCxwb9-f4g7Lr7tqSX0cVxIDB">
+
+      <EmbedBackground>
+          <HeaderText>Most Recent Articles</HeaderText>
+          <EmbedContainer src="https://thetundra.com/conventionsnews/florida-state?fbclid=PAZXh0bgNhZW0CMTEAAaaH_wUuI0WpFbDOtYdURA1rUIA5TRURuJaZ5ZwcPTQimc9m60WoZUY_GRo_aem_AaJqWDpAstYVS08ftPk2VFsRob6cGeA7xd-7jBzhwOp-O2ZRiPzLG9kZemwdc6-YCxwb9-f4g7Lr7tqSX0cVxIDB"></EmbedContainer>
+
+      </EmbedBackground>
+      </Clickable>
+
+      <CalendarHolder>
+        <EventHeaderText>Upcoming Events</EventHeaderText>
+        <EventContainer>
+        {events?.map((event) => (
+          <>
+            <Event key={event.id}>
+              <h1>{event.summary}</h1>
+              <p>{formatDateTime(event.start.dateTime)} - {formatDateTime(event.end.dateTime).split('at')[1]}</p>
+            </Event>
+            <Divider/>
+            </>
+
+        ))}
+        </EventContainer>
+      </CalendarHolder>
+      </SectionThreeRow>
+
     </Section>
     </>
   )

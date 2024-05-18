@@ -70,8 +70,8 @@ const NavLink = styled.a`
 
 
 const LogoImage = styled.img`
-    height: 80px;
-    width: 80px;
+    height: 45px;
+    width: 100%;
 
 `
 
@@ -80,7 +80,7 @@ const LogoNav = styled.a`
     text-align: center;
     height: 100%;
     margin-left:20px;
-    top: 0px;
+    top: 15px;
     position: relative;
     text-decoration: none;
     color: #2C2A29;
@@ -207,11 +207,12 @@ function Navbar(){
     }
 
 
+
   return (
     <>
         <Nav>
             <LogoNav href ="/">
-                <LogoImage src="./assets/fsupblogo.png"/>
+                <LogoImage src="./assets/title logo.png"/>
                 {/* <LogoTitle>FSU Pickleball</LogoTitle> */}
             </LogoNav>
 
@@ -233,8 +234,8 @@ function Navbar(){
 
 
         <MobileMenuDiv className={openHamburgerMenu ? "menuActive" : ""}>
-            <MenuLink href="/">Read About Us!</MenuLink>
-            <MenuLink href="/">About</MenuLink>
+            <MenuLink href="https://thetundra.com/conventionsnews/florida-state?fbclid=PAZXh0bgNhZW0CMTEAAaaH_wUuI0WpFbDOtYdURA1rUIA5TRURuJaZ5ZwcPTQimc9m60WoZUY_GRo_aem_AaJqWDpAstYVS08ftPk2VFsRob6cGeA7xd-7jBzhwOp-O2ZRiPzLG9kZemwdc6-YCxwb9-f4g7Lr7tqSX0cVxIDB">Read About Us!</MenuLink>
+            <MenuLink href="/about">About</MenuLink>
             <MenuLink href="/contact">Contact Us</MenuLink>
             <MenuLink href="/donate">Support Us</MenuLink>
 
