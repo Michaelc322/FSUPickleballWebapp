@@ -128,13 +128,9 @@ const Divider = styled.div`
 `
 
 const Home = () => {
-  // const calendarID = process.env.REACT_APP_CALENDAR_ID
-  // const apiKey = process.env.REACT_APP_GOOGLE_API_KEY
-  // const accessToken = process.env.REACT_APP_GOOGLE_ACCESS_TOKEN
-  const calendarID = "a8cc1e69cfa3851424fac02c2d1f9c40c22008d8f4c7d29e4d0875385d95f069@group.calendar.google.com"
-  const apiKey = "AIzaSyBBGKBD80QjZ2KalZanUDhRnaG4BU46UDY"
+  const calendarID = import.meta.env.VITE_APP_CALENDAR_ID
+  const apiKey = import.meta.env.VITE_APP_GOOGLE_API_KEY
   const [events, setEvents] = useState([])
-
   const getEvents = (calendarID, apiKey) => {
     function initiate() {
         gapi.client
