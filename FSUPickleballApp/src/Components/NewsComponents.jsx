@@ -5,10 +5,9 @@ export const EmbedBackground = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50rem;
+    width: 100%;
     height: 40rem;
     background-color: #f0f0f0;
-    margin-bottom: 100px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     /* transform: scale(1);
@@ -68,6 +67,8 @@ export const EmbedContainer = styled.embed`
 export const Clickable = styled.a`
     text-decoration: none;
     cursor: pointer;
+    width: 40rem;
+    margin-bottom: 100px;
 `
 
 export const Event = styled.div`
