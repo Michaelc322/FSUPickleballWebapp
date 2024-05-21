@@ -61,18 +61,30 @@ const Credit = styled.a`
     right: 5px;
 
  `
+
+const SmallText = styled.p`
+    font-size: 0.8rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #2C2A29;
+
+    a {
+        color: #782F40;
+        transition: all 0.2s ease-in-out;
+    }
+
+    a:hover{
+        color: #CEB888;
+        transition: all 0.2s ease-in-out;
+    }
+`
+
 function Footer(){
     return (
       <>
         <Box>
             <FooterContainer>
                 <HStack>
-                    <FooterPanel>
-                        <FootHeader>Contact</FootHeader>
-
-
-                        
-                    </FooterPanel>
 
                     <FooterPanel>
                         <FootHeader>Socials</FootHeader>
@@ -83,6 +95,7 @@ function Footer(){
                     </FooterPanel>
                 </HStack>
 
+                <SmallText>Reach out to us at <a href="mailto:fsupickleballclub@gmail.com">fsupickleballclub@gmail.com</a></SmallText>
             </FooterContainer>
             <BreakLine/>
             <SponsorBox>

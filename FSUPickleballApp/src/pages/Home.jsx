@@ -69,6 +69,10 @@ const BgImageContainer = styled.div`
   width: 100%;
   height: 600px;
   box-shadow: 0px 0px 1rem black inset;
+  display: flex;
+  background-color: black;
+  overflow: hidden;
+  flex: 1;
 `
 
 const MainText = styled.h3`
@@ -168,7 +172,10 @@ useEffect(() => {
   <>
 
     <BgImageContainer>
-      <HeaderImage src='./images/peopleplaying.jpg'></HeaderImage>
+      <HeaderImage src='./images/goodgame.jpg'></HeaderImage>
+      <HeaderImage src='./images/engagepaddles.jpg'></HeaderImage>
+      <HeaderImage src='./images/memberstogether.jpg'></HeaderImage>
+      <HeaderImage src='./images/nationals.jpg'></HeaderImage>
 
       <HStack>
         <MainText>Florida State University Pickleball</MainText>
@@ -227,10 +234,11 @@ useEffect(() => {
               </AboutProfile>
             </Card>
             <Card>
-              <ProfileImage src ="./images/blank-profile-picture-973460_1280.png"/>
+              <ProfileImage src ="./images/Michael.jpg"/>
               <Position>Sports Chair</Position>
+              <NameTxt>Michael Carroll</NameTxt>
               <AboutProfile>
-                placeholder text
+                Hi! My name is Michael Carroll and I am a junior at FSU. I am from Orlando and I started playing pickleball after I graduated high school. I am majoring in Computer Science and fun fact: I created this website.
               </AboutProfile>
             </Card>
             <Card>
@@ -255,10 +263,11 @@ useEffect(() => {
               </AboutProfile>
             </Card>
             <Card>
-              <ProfileImage src ="./images/blank-profile-picture-973460_1280.png"/>
+              <ProfileImage src ="./images/maddie.png"/>
               <Position>Writer</Position>
+              <NameTxt>Maddie</NameTxt>
               <AboutProfile>
-                placeholder text
+                I'm an incoming sophomore from Tampa and I am majoring in Mass/Media communications minoring in Hospitality. I started playing pickleball freshman year and I heard about this club from a friend and I love it!
               </AboutProfile>
             </Card>
 

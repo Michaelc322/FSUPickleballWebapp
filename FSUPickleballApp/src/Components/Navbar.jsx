@@ -70,8 +70,10 @@ const NavLink = styled.a`
 
 
 const LogoImage = styled.img`
-    height: 45px;
+    height: 40px;
     width: 100%;
+
+
 
 `
 
@@ -80,7 +82,7 @@ const LogoNav = styled.a`
     text-align: center;
     height: 100%;
     margin-left:20px;
-    top: 15px;
+    top: 18px;
     position: relative;
     text-decoration: none;
     color: #2C2A29;

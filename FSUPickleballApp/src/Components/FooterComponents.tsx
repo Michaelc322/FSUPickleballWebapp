@@ -16,6 +16,7 @@ export const FooterContainer = styled.div`
     align-items: center;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 `;
  
  export const Socials = styled.a`
