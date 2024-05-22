@@ -273,8 +273,13 @@ useEffect(() => {
             <Card>
               <ProfileImage src ="./images/bella.jpg"/>
               <Position>Vice President</Position>
+              <NameTxt>Bella Kontil</NameTxt>
               <AboutProfile>
-                placeholder text
+                Hi! My name is Bella Kontil and I am the Vice President of the FSU
+                Pickleball Club. I am a sophomore and will be graduating in 2027 with
+                a degree in Finance. I'm beyond glad to have joined the club my freshman year
+                and since then, I have made the best friends/memories within it. I am also an ambassador
+                for Selkirk Sport, so if you need any pickle gear or want to demo a paddle HMU!
               </AboutProfile>
             </Card>
             <Card>

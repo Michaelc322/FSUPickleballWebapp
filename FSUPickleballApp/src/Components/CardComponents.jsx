@@ -72,8 +72,8 @@ export const AboutProfile = styled.p`
     font-weight: 500;
     color: #782F40;
     line-height: 1.3;
-    padding-right: 32px;
-    padding-left: 32px;
+    padding-right: 20px;
+    padding-left: 20px;
     margin: 0;
     text-align: center;
 `
