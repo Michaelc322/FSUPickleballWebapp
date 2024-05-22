@@ -131,6 +131,63 @@ const Divider = styled.div`
   margin-bottom: 1rem;
 `
 
+export const AboutContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50rem;
+    height: 30rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    margin-top: 3rem;
+    padding: 30px;
+    transform: scale(1);
+    transition: all 0.25s ease-in-out;
+
+    /* &:hover {
+        transform: scale(1.02);
+        transition: all 0.2s ease-in-out;
+    
+    } */
+
+    @media ${device.md} {
+      width: 80%;
+      height: auto;
+    }
+    @media ${device.sm} {
+        height: auto;
+    }
+
+`
+
+const AboutText = styled.p`
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #2C2A29;
+    margin: 0;
+    text-align: center;
+
+    span {
+      color: #CEB888;
+    
+    }
+  
+`
+
+const AboutHeader = styled.h3`
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #782F40;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    
+  ` 
+
 const Home = () => {
   const calendarID = import.meta.env.VITE_APP_CALENDAR_ID
   const apiKey = import.meta.env.VITE_APP_GOOGLE_API_KEY
@@ -184,12 +241,24 @@ useEffect(() => {
     </BgImageContainer>
     <Section id="one">
       <Container className="home-container">
-        <HeaderText>section 1 (who we are)</HeaderText> 
+        <HeaderText>Who we are</HeaderText> 
+        <BreakLine/>
+
+        <AboutContainer>
+          <AboutHeader>Unconquered Spirit</AboutHeader>
+          <AboutText>Welcome to the home of the <span>Pickleball Club</span> at <span>Florida State University!</span> This is one of the hottest clubs on campus! The club started in January of 2023 with just a handful of enthusiasts, this club has ballooned
+            into a thriving community of nearly 200 dedicated players. From hosting epic tournaments to giving back to the Tallahassee roots, pickleball at Florida State is more than just a club-this is a force to be reckoned with. This club
+            is exhilarating, full of community, and skillful as they have even taken their talents to San Diego, where they left their mark on the pickleball scene! So grab a paddle and join the fun-it's time to show the world what the Pickleball Club
+            at Florida State University is made of!
+          </AboutText>
+        </AboutContainer>
+
       </Container>
+
     </Section>
 
     <Section id="two">
-      <Container className="home-container">
+      <Container>
         <HeaderText>Serve, Rally, Connect: Meet the Pickleball Board!</HeaderText>
         <BreakLine/>
         <CardContainer>
@@ -241,7 +310,7 @@ useEffect(() => {
                 Hi! My name is Michael Carroll and I am a junior at FSU. I am from Orlando and I started playing pickleball after I graduated high school. I am majoring in Computer Science and fun fact: I created this website.
               </AboutProfile>
             </Card>
-            <Card>
+            {/* <Card>
               <ProfileImage src ="./images/blank-profile-picture-973460_1280.png"/>
               <Position>Merch Chair</Position>
               <AboutProfile>
@@ -261,7 +330,7 @@ useEffect(() => {
               <AboutProfile>
                 placeholder text
               </AboutProfile>
-            </Card>
+            </Card> */}
             <Card>
               <ProfileImage src ="./images/maddie.png"/>
               <Position>Writer</Position>

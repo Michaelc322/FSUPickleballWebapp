@@ -9,7 +9,7 @@ const HStack = styled.div`
     
 `
 export const BreakLine = styled.div`
-    width: 400px;
+    width: 30%;
     border-bottom: 1px solid #cfcfcf;
 `
 

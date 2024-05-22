@@ -12,7 +12,6 @@ export const CardContainer = styled.div`
 export const Card = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 24rem;
     height: 36rem;

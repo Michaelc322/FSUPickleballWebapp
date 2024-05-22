@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { useState } from 'react';
 import '../styles/styles.css';
+import { device } from '../styles/breakpoints'
 
 
 const Nav = styled.div`
@@ -16,7 +17,7 @@ const Nav = styled.div`
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 
 
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 900px){
         nav{
             display: none;
         }
@@ -73,7 +74,9 @@ const LogoImage = styled.img`
     height: 40px;
     width: 100%;
 
-
+    @media ${device.xs} {
+        height: 30px;
+    }
 
 `
 
@@ -86,6 +89,10 @@ const LogoNav = styled.a`
     position: relative;
     text-decoration: none;
     color: #2C2A29;
+
+    @media ${device.xs} {
+        top: 25px;
+    }
 `
 
 const LogoTitle = styled.h1`
@@ -121,7 +128,7 @@ const MenuDiv = styled.div`
 const Hamburger = styled.div`
     display: none;
 
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 900px){
         display: block;
         right: 30px;
         position: relative;
@@ -134,7 +141,7 @@ const Hamburger = styled.div`
 
 const MobileMenuDiv = styled.div`
     display: none;
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 900px){
         position: fixed;
         z-index: 13;
         background-color: #f0f0f0;
