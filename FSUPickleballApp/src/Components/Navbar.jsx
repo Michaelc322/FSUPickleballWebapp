@@ -75,7 +75,7 @@ const LogoImage = styled.img`
     width: 100%;
 
     @media ${device.xs} {
-        height: 30px;
+        width: 50%;
     }
 
 `
@@ -90,9 +90,6 @@ const LogoNav = styled.a`
     text-decoration: none;
     color: #2C2A29;
 
-    @media ${device.xs} {
-        top: 25px;
-    }
 `
 
 const LogoTitle = styled.h1`
