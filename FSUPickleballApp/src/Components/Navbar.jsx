@@ -72,12 +72,6 @@ const NavLink = styled.a`
 
 const LogoImage = styled.img`
     height: 40px;
-    width: 100%;
-
-    @media ${device.xs} {
-        width: 50%;
-    }
-
 `
 
 const LogoNav = styled.a`
