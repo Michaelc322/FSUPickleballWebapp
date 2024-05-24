@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 import { useState } from 'react';
 import '../styles/styles.css';
-import { device } from '../styles/breakpoints'
-
 
 const Nav = styled.div`
     position: fixed;
@@ -206,7 +204,9 @@ function Navbar(){
         setOpenHamburgerMenu(!openHamburgerMenu);
     }
 
-
+    const handleClick = () => {
+        console.log("location.hash");
+    }
 
   return (
     <>
@@ -235,7 +235,7 @@ function Navbar(){
 
         <MobileMenuDiv className={openHamburgerMenu ? "menuActive" : ""}>
             <MenuLink href="https://thetundra.com/conventionsnews/florida-state?fbclid=PAZXh0bgNhZW0CMTEAAaaH_wUuI0WpFbDOtYdURA1rUIA5TRURuJaZ5ZwcPTQimc9m60WoZUY_GRo_aem_AaJqWDpAstYVS08ftPk2VFsRob6cGeA7xd-7jBzhwOp-O2ZRiPzLG9kZemwdc6-YCxwb9-f4g7Lr7tqSX0cVxIDB">Read About Us!</MenuLink>
-            <MenuLink href="/about">About</MenuLink>
+            <MenuLink href="/about" onClick={handleClick}>About</MenuLink>
             <MenuLink href="/contact">Contact Us</MenuLink>
             <MenuLink href="/donate">Support Us</MenuLink>
 

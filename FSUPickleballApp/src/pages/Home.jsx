@@ -78,7 +78,7 @@ const BgImageContainer = styled.div`
 const MainText = styled.h3`
     font-size: 3rem;
     font-family: 'Poppins', sans-serif;
-    font-weight: 300;
+    font-weight: 600;
     color: #ffffff;
     padding-right: 50px;
     text-shadow: 0px 2px 2.5px rgba(0, 0, 0, 0.8);
@@ -285,8 +285,10 @@ useEffect(() => {
             <Card>
               <ProfileImage src ="./images/zakCropped.png"/>
               <Position>Treasurer</Position>
+              <NameTxt>Zakary DeLeo</NameTxt>
               <AboutProfile>
-                placeholder text
+                I'm a full time entrepreneur who loves pickleball! I run Tally Liquidation a bins store out of 
+                Railroad Square, and when I'm not there, I'm playing pickleball!
               </AboutProfile>
             </Card>
             <Card>
