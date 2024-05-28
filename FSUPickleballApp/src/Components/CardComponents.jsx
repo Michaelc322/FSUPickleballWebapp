@@ -67,13 +67,13 @@ export const Position = styled.h3`
 
 
 export const AboutProfile = styled.p`
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-family: Josefin Sans;
     font-weight: 500;
     color: #782F40;
     line-height: 1.3;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
     margin: 0;
     text-align: center;
 `
@@ -81,7 +81,7 @@ export const AboutProfile = styled.p`
 export const NameTxt = styled.p`
     font-size: 1rem;
     font-family: Josefin Sans;
-    font-weight: 370;
+    font-weight: 500;
     color: #2C2A29;
 
     margin: 0;

@@ -170,7 +170,6 @@ const AboutText = styled.p`
     color: #2C2A29;
     margin: 0;
     text-align: center;
-
     span {
       color: #CEB888;
     
@@ -187,6 +186,15 @@ const AboutHeader = styled.h3`
     margin-top: 0;
     
   ` 
+
+const AboutTextContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    &::-webkit-scrollbar-button {
+      display: none;
+    }
+`
 
 const Home = () => {
   const calendarID = import.meta.env.VITE_APP_CALENDAR_ID
@@ -266,14 +274,25 @@ useEffect(() => {
             <Card>
               <ProfileImage src ="./images/finaCropped2.jpg"/>
               <Position>President</Position>
+              <NameTxt>Fina McCreary</NameTxt>
+              <AboutTextContainer>
               <AboutProfile>
-                placeholder text
+                Hi, my name is Fina McCreary. I am a senior pursuing a degree in marketing.
+                Ever since I moved to Florida, I have been playing pickleball. I remember when
+                I moved here in middle school being the only person in the class who did not know
+                what it was. Fast forward 8 years, and now I am the club president here at FSU!
+                Jenna Kaplan and Evan Nelles paved the such an amazing path for this new executive board
+                to come in and bring this club to new heights; I am honored to follow them. I am so 
+                grateful for the people in this club, and I hope that in my last semester we can make it the best year
+                yet.
               </AboutProfile>
+              </AboutTextContainer>
             </Card>
             <Card>
               <ProfileImage src ="./images/bella.jpg"/>
               <Position>Vice President</Position>
               <NameTxt>Bella Kontil</NameTxt>
+              <AboutTextContainer>
               <AboutProfile>
                 Hi! My name is Bella Kontil and I am the Vice President of the FSU
                 Pickleball Club. I am a sophomore and will be graduating in 2027 with
@@ -281,26 +300,31 @@ useEffect(() => {
                 and since then, I have made the best friends/memories within it. I am also an ambassador
                 for Selkirk Sport, so if you need any pickle gear or want to demo a paddle HMU!
               </AboutProfile>
+              </AboutTextContainer>
             </Card>
             <Card>
               <ProfileImage src ="./images/zakCropped.png"/>
               <Position>Treasurer</Position>
               <NameTxt>Zakary DeLeo</NameTxt>
+              <AboutTextContainer>
               <AboutProfile>
                 I'm a full time entrepreneur who loves pickleball! I run Tally Liquidation a bins store out of 
                 Railroad Square, and when I'm not there, I'm playing pickleball!
               </AboutProfile>
+              </AboutTextContainer>
             </Card>
             <Card>
               <ProfileImage src ="./images/josh.JPEG"/>
               <Position>Social Media</Position>
               <NameTxt>Josh Phillips</NameTxt>
+              <AboutTextContainer>
               <AboutProfile>
                 Hi! My name is Josh Phillips and I am the social media captain for the FSU Pickleball Club.
                 I am a senior and will be graduating in 2025 with a degree in Marketing. I started playing pickleball
                 in January of 2023 and I use an Engage Pursuit Pro 1 paddle. I am also an ambassador for Engage Pickleball,
                 so if you need a new paddle, hit me up :)
               </AboutProfile>
+              </AboutTextContainer>
             </Card>
             <Card>
               <ProfileImage src ="./images/isaiah.jpg"/>
@@ -313,38 +337,22 @@ useEffect(() => {
               <ProfileImage src ="./images/Michael.jpg"/>
               <Position>Sports Chair</Position>
               <NameTxt>Michael Carroll</NameTxt>
+              <AboutTextContainer>
               <AboutProfile>
                 Hi! My name is Michael Carroll and I am a junior at FSU. I am from Orlando and I started playing pickleball after I graduated high school. I am majoring in Computer Science and fun fact: I created this website.
+                
               </AboutProfile>
+              </AboutTextContainer>
             </Card>
-            {/* <Card>
-              <ProfileImage src ="./images/blank-profile-picture-973460_1280.png"/>
-              <Position>Merch Chair</Position>
-              <AboutProfile>
-                placeholder text
-              </AboutProfile>
-            </Card>
-            <Card>
-              <ProfileImage src ="./images/blank-profile-picture-973460_1280.png"/>
-              <Position>Community Outreach</Position>
-              <AboutProfile>
-                placeholder text
-              </AboutProfile>
-            </Card>
-            <Card>
-              <ProfileImage src ="./images/blank-profile-picture-973460_1280.png"/>
-              <Position>Fundraising</Position>
-              <AboutProfile>
-                placeholder text
-              </AboutProfile>
-            </Card> */}
             <Card>
               <ProfileImage src ="./images/maddie.png"/>
               <Position>Writer</Position>
               <NameTxt>Maddie</NameTxt>
+              <AboutTextContainer>
               <AboutProfile>
                 I'm an incoming sophomore from Tampa and I am majoring in Mass/Media communications minoring in Hospitality. I started playing pickleball freshman year and I heard about this club from a friend and I love it!
               </AboutProfile>
+              </AboutTextContainer>
             </Card>
 
           </RowStack>
@@ -357,14 +365,13 @@ useEffect(() => {
         <HeaderText>Keep up with the latest!</HeaderText>
       </Container>
       <SectionThreeRow>
-      <Clickable href="https://thetundra.com/conventionsnews/florida-state?fbclid=PAZXh0bgNhZW0CMTEAAaaH_wUuI0WpFbDOtYdURA1rUIA5TRURuJaZ5ZwcPTQimc9m60WoZUY_GRo_aem_AaJqWDpAstYVS08ftPk2VFsRob6cGeA7xd-7jBzhwOp-O2ZRiPzLG9kZemwdc6-YCxwb9-f4g7Lr7tqSX0cVxIDB">
 
       <EmbedBackground>
           <HeaderText>Most Recent Articles</HeaderText>
-          <EmbedContainer src="https://thetundra.com/conventionsnews/florida-state?fbclid=PAZXh0bgNhZW0CMTEAAaaH_wUuI0WpFbDOtYdURA1rUIA5TRURuJaZ5ZwcPTQimc9m60WoZUY_GRo_aem_AaJqWDpAstYVS08ftPk2VFsRob6cGeA7xd-7jBzhwOp-O2ZRiPzLG9kZemwdc6-YCxwb9-f4g7Lr7tqSX0cVxIDB"></EmbedContainer>
-
+          <EmbedContainer src="https://thetundra.com/conventionsnews/florida-state?fbclid=PAZXh0bgNhZW0CMTEAAaaH_wUuI0WpFbDOtYdURA1rUIA5TRURuJaZ5ZwcPTQimc9m60WoZUY_GRo_aem_AaJqWDpAstYVS08ftPk2VFsRob6cGeA7xd-7jBzhwOp-O2ZRiPzLG9kZemwdc6-YCxwb9-f4g7Lr7tqSX0cVxIDB">
+          </EmbedContainer>
       </EmbedBackground>
-      </Clickable>
+
 
       <CalendarHolder>
         <EventHeaderText>Upcoming Events</EventHeaderText>

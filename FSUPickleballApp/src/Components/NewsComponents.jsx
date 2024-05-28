@@ -1,15 +1,18 @@
 import styled from 'styled-components'
+import '../styles/home.css'
 
 export const EmbedBackground = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 45rem;
     height: 40rem;
     background-color: #f0f0f0;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+
     /* transform: scale(1);
     transition: all 0.25s ease-in-out;
 
@@ -28,7 +31,7 @@ export const SectionThreeRow = styled.div`
 `
 export const CalendarHolder = styled.div`
     text-align: center;
-    width: 30rem;
+    width: 23rem;
     height: 40rem;
     background-color: #f0f0f0;
     border-radius: 10px;
@@ -53,12 +56,13 @@ export const EventContainer = styled.div`
     height: 32rem;
     padding-right: 30px;
     padding-left: 30px;
+
 `
 
 
 export const EmbedContainer = styled.embed`
-  width: 80%;
-  height: 70%;
+    width: 80%;
+  height: 32rem;
   border-radius: 10px;
   `
 

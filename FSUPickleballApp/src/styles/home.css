@@ -11,3 +11,12 @@ section {
 #two {
     background-color: #f0f0f0;
 }
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #782F40;
+    -webkit-border-radius: 15px;
+}
